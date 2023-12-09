@@ -17,6 +17,6 @@ then
         exit 1
 fi
 
-numOfMatchingFiles="$(grep -r ${searchstr} -l | wc -l)"
-numOfMatchingLines="$(grep -r ${searchstr} | wc -l)"
+numOfMatchingFiles="$(grep -r ${searchstr} ${filesdir} -l | wc -l)"
+numOfMatchingLines="$(grep -r ${searchstr} ${filesdir} | wc -l)"
 echo "The number of files are ${numOfMatchingFiles} and the number of matching lines are ${numOfMatchingLines}"
